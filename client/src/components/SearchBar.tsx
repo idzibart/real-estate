@@ -25,7 +25,7 @@ const SearchBar = () => {
       <div>
         {types.map((type) => (
           <button
-            className={`border border-b-0 px-9 py-4 capitalize first:rounded-tl-md first:border-r-0 last:rounded-tr-md last:border-l-0 ${query.type === type ? "bg-black text-white" : "bg-white"}`}
+            className={`border px-9 py-4 capitalize first:rounded-tl-md last:rounded-tr-md md:border-b-0 md:first:border-r-0 md:last:border-l-0 ${query.type === type ? "bg-black text-white" : "bg-white"}`}
             key={type}
             onClick={() => switchType(type)}
           >
@@ -33,7 +33,7 @@ const SearchBar = () => {
           </button>
         ))}
       </div>
-      <form className="flex h-16 justify-between gap-1 border [&>*]:border-0 [&>input]:px-1 xl:[&>input]:px-2 [&>input]:w-1/4">
+      <form className="flex flex-col justify-between gap-1 border-0 md:h-16 md:flex-row md:border [&>*]:border-0 [&>input]:border [&>input]:p-5 md:[&>input]:w-[170px] md:[&>input]:border-0 lg:[&>input]:w-[110px] xl:[&>input]:w-[160px] xl:[&>input]:px-2">
         <input type="text" name="location" placeholder="City location" />
         <input
           type="text"
@@ -49,8 +49,8 @@ const SearchBar = () => {
           max={10000000}
           placeholder="maxPrice"
         />
-        <button className="bg-primary w-16 items-center justify-center flex">
-          <img src="search.png" alt="" className="h-8 w-8 p-1 text-white" />
+        <button className="bg-primary flex flex-1 items-center justify-center p-2 md:p-0">
+          <img src="search.png" alt="" className="h-8 w-8 text-white" />
         </button>
       </form>
     </div>

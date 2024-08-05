@@ -5,8 +5,8 @@ const Home = () => {
   return (
     <div className="flex h-full">
       <div className="w-full lg:w-3/5">
-        <div className="flex h-full flex-col justify-center gap-12 pr-24">
-          <h1 className="text-5xl font-bold">
+        <div className="flex h-full flex-col justify-start gap-12 lg:justify-center lg:pr-24">
+          <h1 className="text-2xl font-bold md:text-4xl xl:text-5xl">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
           </h1>
           <p>
