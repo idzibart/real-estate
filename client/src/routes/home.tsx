@@ -4,6 +4,7 @@ import SearchBar from "../components/SearchBar";
 const Home = () => {
   return (
     <div className="flex h-full">
+      {/* LEFT */}
       <div className="w-full lg:w-3/5">
         <div className="flex h-full flex-col justify-start gap-12 lg:justify-center lg:pr-24">
           <h1 className="text-2xl font-bold md:text-4xl xl:text-5xl">
@@ -31,7 +32,8 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="bg-secondary relative hidden w-2/5 items-center lg:block">
+      {/* RIGHT */}
+      <div className="relative hidden w-2/5 items-center bg-secondary lg:block">
         <img
           src="/bg.png"
           alt=""
