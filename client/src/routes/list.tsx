@@ -9,7 +9,7 @@ const List = () => {
     <div className="flex h-full">
       {/* LIST CONTAINER*/}
       <div className="w-3/5">
-        <div className="pr-10">
+        <div className="flex h-full flex-col gap-10 overflow-y-scroll pr-10">
           <Filter />
           {data.map((item) => (
             <Card key={item.id} item={item} />

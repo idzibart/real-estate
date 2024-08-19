@@ -12,42 +12,24 @@ const Navbar = () => {
           <img src="" alt="" />
           <span className="md:hidden lg:block">Homek</span>
         </a>
-        <a
-          href=""
-          className="hidden transition-all duration-300 hover:scale-105 md:block"
-        >
+        <a href="" className="nav-link">
           Home
         </a>
-        <a
-          href=""
-          className="hidden transition-all duration-300 hover:scale-105 md:block"
-        >
+        <a href="" className="nav-link">
           About
         </a>
-        <a
-          href=""
-          className="hidden transition-all duration-300 hover:scale-105 md:block"
-        >
+        <a href="" className="nav-link">
           Contact
         </a>
-        <a
-          href=""
-          className="hidden transition-all duration-300 hover:scale-105 md:block"
-        >
+        <a href="" className="nav-link">
           Agents
         </a>
       </div>
       <div className="flex h-full w-2/5 items-center justify-end gap-12">
-        <a
-          href=""
-          className="hidden transition-all duration-300 hover:scale-105 md:block"
-        >
+        <a href="" className="nav-link">
           Sign in
         </a>
-        <a
-          href=""
-          className="hidden bg-yellow-300 px-3 py-1 transition-all duration-300 hover:scale-105 md:block"
-        >
+        <a href="" className="nav-link hidden bg-yellow-300 px-3 py-1">
           Sign up
         </a>
       </div>
@@ -65,25 +47,22 @@ const Navbar = () => {
           open ? "-right-1/2" : "-right-0"
         }`}
       >
-        <a href="" className="transition-all duration-300 hover:scale-105">
+        <a href="" className="sidebar-link">
           Home
         </a>
-        <a href="" className="transition-all duration-300 hover:scale-105">
+        <a href="" className="sidebar-link">
           About
         </a>
-        <a href="" className="transition-all duration-300 hover:scale-105">
+        <a href="" className="sidebar-link">
           Contact
         </a>
-        <a href="" className="transition-all duration-300 hover:scale-105">
+        <a href="" className="sidebar-link">
           Agents
         </a>
-        <a href="" className="transition-all duration-300 hover:scale-105">
+        <a href="" className="sidebar-link">
           Sign in
         </a>
-        <a
-          href=""
-          className="bg-yellow-300 px-3 py-1 transition-all duration-300 hover:scale-105"
-        >
+        <a href="" className="sidebar-link bg-yellow-300">
           Sign up
         </a>
       </div>

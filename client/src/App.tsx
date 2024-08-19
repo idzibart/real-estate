@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "./components/Navbar";
 import Home from "./routes/home";
 import List from "./routes/list";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";

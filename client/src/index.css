@@ -33,3 +33,31 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.nav-link {
+  @apply hidden transition-all duration-300 hover:scale-105 md:block;
+}
+
+.sidebar-link {
+  @apply transition-all duration-300 hover:scale-105 py-3 px-6 m-5;
+}
+
+.label {
+  @apply text-xs;
+}
+
+.input-top {
+  @apply flex w-full rounded border p-2 text-sm;
+}
+
+.input {
+  @apply flex w-24 rounded border p-2 text-sm;
+}
+
+.select {
+  @apply w-24 rounded border p-2 text-sm;
+}
+
+.item {
+  @apply flex flex-col gap-1;
+}
