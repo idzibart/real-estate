@@ -16,32 +16,34 @@ const Card = ({ item }: CardProps) => {
           className="h-full w-full rounded-lg border object-cover"
         />
       </Link>
-      <div className="w-3/5">
-        <h2>
+      <div className="flex w-3/5 flex-col justify-between gap-2">
+        <h2 className="text-xl font-semibold text-gray-800 transition-all duration-300 hover:scale-[101%] hover:text-black">
           <Link to={`${item.id}`}>{item.title}</Link>
         </h2>
-        <p>
-          <img src="/pin.png" alt="" />
+        <p className="flex items-center gap-1 text-sm text-gray-600">
+          <img className="h-4 w-4" src="/pin.png" alt="" />
           <span>{item.address}</span>
         </p>
-        <p>$ {item.price}</p>
-        <div>
-          <div>
-            <div>
-              <img src="/bed.png" alt="" />
+        <p className="w-fit rounded bg-yellow-200 p-1 text-xl font-light">
+          $ {item.price}
+        </p>
+        <div className="flex justify-between gap-2">
+          <div className="flex gap-5 text-sm">
+            <div className="g-1 flex items-center rounded bg-gray-100 p-1">
+              <img className="h-4 w-4" src="/bed.png" alt="" />
               <span>{item.bedroom} bedroom</span>
             </div>
-            <div>
-              <img src="/bath.png" alt="" />
+            <div className="g-1 flex items-center rounded bg-gray-100 p-1">
+              <img className="h-4 w-4" src="/bath.png" alt="" />
               <span>{item.bathroom} bathroom</span>
             </div>
           </div>
-          <div>
-            <div>
-              <img src="/save.png" alt="" />
+          <div className="g-5 flex">
+            <div className="flex cursor-pointer items-center justify-center rounded border p-1 hover:bg-slate-200">
+              <img className="h-4 w-4" src="/save.png" alt="" />
             </div>
-            <div>
-              <img src="/.chat.png" alt="" />
+            <div className="flex cursor-pointer items-center justify-center rounded border p-1 hover:bg-slate-200">
+              <img className="h-4 w-4" src="/chat.png" alt="" />
             </div>
           </div>
         </div>

@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-
-interface QueryState {
-  type: "buy" | "rent";
-  location: string;
-  maxPrice: string;
-  minPrice: string;
-}
+import { QueryState } from "../lib/types";
 
 const types: Array<"buy" | "rent"> = ["buy", "rent"];
 
@@ -49,7 +43,7 @@ const SearchBar = () => {
           max={10000000}
           placeholder="maxPrice"
         />
-        <button className="bg-primary flex flex-1 items-center justify-center p-2 md:p-0">
+        <button className="flex flex-1 items-center justify-center bg-primary p-2 md:p-0">
           <img src="search.png" alt="" className="h-8 w-8 text-white" />
         </button>
       </form>
