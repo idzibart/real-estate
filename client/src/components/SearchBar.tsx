@@ -14,6 +14,7 @@ const SearchBar = () => {
   const switchType = (val: "buy" | "rent") => {
     setQuery((prev) => ({ ...prev, type: val }));
   };
+  
   return (
     <div className="w-full">
       <div>

@@ -5,13 +5,14 @@ import "leaflet/dist/leaflet.css";
 import { Item, MapProps } from "../lib/types";
 import Pin from "./Pin";
 
+
 const position: LatLngTuple = [51.505, -0.09];
 
 const Map = ({ items }: MapProps) => {
   return (
     <MapContainer
       center={position}
-      zoom={10}
+      zoom={8}
       scrollWheelZoom={false}
       className="h-full w-full rounded-2xl"
     >

@@ -6,6 +6,7 @@ const Filter = () => {
       <h1 className="text-2xl font-light">
         Search result for <b>Polska</b>
       </h1>
+
       {/* TOP */}
       <div className="w-full">
         <div className="item">
@@ -21,6 +22,7 @@ const Filter = () => {
           />
         </div>
       </div>
+      
       {/* BOTTOM */}
       <div className="flex flex-wrap justify-between gap-1">
         <div className="item">

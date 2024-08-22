@@ -17,6 +17,7 @@ const List = () => {
           ))}
         </div>
       </div>
+
       {/* MAP CONTAINER */}
       <div className="h-full w-2/5 bg-secondary">
         <Map items={data} />

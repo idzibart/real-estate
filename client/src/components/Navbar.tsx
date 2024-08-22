@@ -4,6 +4,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
     <nav className="flex h-24 items-center justify-between">
+      {/* LEFT SECTION */}
       <div className="flex w-3/5 items-center gap-12">
         <a
           href="/"
@@ -25,6 +26,8 @@ const Navbar = () => {
           Agents
         </a>
       </div>
+
+      {/* RIGHT SECTION */}
       <div className="flex h-full w-2/5 items-center justify-end gap-12">
         <a href="" className="nav-link">
           Sign in
@@ -33,6 +36,7 @@ const Navbar = () => {
           Sign up
         </a>
       </div>
+
       {/* SIDEBAR */}
       <div className="z-50 md:hidden">
         <img

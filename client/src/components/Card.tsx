@@ -9,6 +9,8 @@ interface CardProps {
 const Card = ({ item }: CardProps) => {
   return (
     <div className="flex gap-5">
+
+      {/* IMAGE SECTION */}
       <Link to={`${item.id}`} className="h-48 w-2/5">
         <img
           src={item.img}
@@ -16,9 +18,11 @@ const Card = ({ item }: CardProps) => {
           className="h-full w-full rounded-lg border object-cover"
         />
       </Link>
+
+      {/* INFO SECTION */}
       <div className="flex w-3/5 flex-col justify-between gap-2">
         <h2 className="text-xl font-semibold text-gray-800 transition-all duration-300 hover:scale-[101%] hover:text-black">
-          <Link to={`${item.id}`}>{item.title}</Link>
+          <Link to={`/${item.id}`}>{item.title}</Link>
         </h2>
         <p className="flex items-center gap-1 text-sm text-gray-600">
           <img className="h-4 w-4" src="/pin.png" alt="" />
