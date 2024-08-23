@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
-const Slider = () => {
-  return (
-    <div>Slider</div>
-  )
+interface SliderProps {
+  images: string[];
 }
 
-export default Slider
+const Slider = ({images}: SliderProps) => {
+  return <div>Slider</div>;
+};
+
+export default Slider;
