@@ -39,7 +39,7 @@ code {
 }
 
 .sidebar-link {
-  @apply transition-all duration-300 hover:scale-105 py-3 px-6 m-5;
+  @apply m-5 px-6 py-3 transition-all duration-300 hover:scale-105;
 }
 
 .label {
@@ -60,4 +60,8 @@ code {
 
 .item {
   @apply flex flex-col gap-1;
+}
+
+.icon {
+  @apply h-6 w-6;
 }

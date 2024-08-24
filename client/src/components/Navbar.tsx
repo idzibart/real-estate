@@ -28,7 +28,7 @@ const Navbar = () => {
       </div>
 
       {/* RIGHT SECTION */}
-      <div className="flex h-full w-2/5 items-center justify-end gap-12">
+      <div className="flex h-full w-2/5 items-center bg-secondary justify-end gap-12">
         <a href="" className="nav-link">
           Sign in
         </a>

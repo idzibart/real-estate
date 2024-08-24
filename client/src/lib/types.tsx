@@ -35,9 +35,13 @@ export interface QueryState {
 }
 
 export interface MapProps {
-  items: Item[];
+  items: Item[] | SinglePost[];
 }
 
 export interface PinProps {
   item: Item;
+}
+
+export interface SliderProps {
+  images: string[];
 }
