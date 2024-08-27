@@ -8,6 +8,7 @@ const List = () => {
   const data = listData;
   return (
     <div className="flex h-full">
+      
       {/* LIST CONTAINER*/}
       <div className="w-3/5">
         <div className="flex h-full flex-col gap-10 overflow-y-scroll pb-10 pr-10">

@@ -4,6 +4,7 @@ import List from "./routes/list";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./layout/layout";
 import Main from "./routes/main";
+import User from "./routes/user";
 
 function App() {
   const router = createBrowserRouter([
@@ -22,6 +23,10 @@ function App() {
         {
           path: ":id",
           element: <Main />,
+        },
+        {
+          path: "/profile",
+          element: <User />,
         },
       ],
     },

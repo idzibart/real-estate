@@ -39,7 +39,7 @@ export interface MapProps {
 }
 
 export interface PinProps {
-  item: Item;
+  item: Item | SinglePost;
 }
 
 export interface SliderProps {

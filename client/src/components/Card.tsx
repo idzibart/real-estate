@@ -9,9 +9,8 @@ interface CardProps {
 const Card = ({ item }: CardProps) => {
   return (
     <div className="flex gap-5">
-
       {/* IMAGE SECTION */}
-      <Link to={`${item.id}`} className="h-48 w-2/5">
+      <Link to={`/${item.id}`} className="h-48 w-2/5">
         <img
           src={item.img}
           alt=""

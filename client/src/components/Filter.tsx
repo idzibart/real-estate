@@ -22,7 +22,7 @@ const Filter = () => {
           />
         </div>
       </div>
-      
+
       {/* BOTTOM */}
       <div className="flex flex-wrap justify-between gap-1">
         <div className="item">
