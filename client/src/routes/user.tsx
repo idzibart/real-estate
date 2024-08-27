@@ -41,7 +41,7 @@ const User = () => {
           <UserList />
         </div>
       </div>
-      <div className="h-max">
+      <div className="h-full w-2/5 bg-secondary">
         <div className="h-full px-5">
           <Chat />
         </div>
