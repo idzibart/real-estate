@@ -45,3 +45,17 @@ export interface PinProps {
 export interface SliderProps {
   images: string[];
 }
+
+export interface FormData {
+  username: string;
+  email: string;
+  password: string;
+}
+
+export interface User {
+  id: string;
+  username: string;
+  email: string;
+  avatar: string;
+  isAdmin: boolean;
+}

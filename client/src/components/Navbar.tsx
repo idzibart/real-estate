@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-
-  const user = true;
+  const { currentUser } = useContext(AuthContext);
 
   return (
     <nav className="flex h-24 items-center justify-between">
@@ -33,14 +33,14 @@ const Navbar = () => {
 
       {/* RIGHT SECTION */}
       <div className="flex h-full w-2/5 items-center justify-end gap-12 bg-secondary">
-        {user ? (
-          <div className="flex items-center font-bold m-5">
+        {currentUser ? (
+          <div className="m-5 flex items-center font-bold">
             <img
-              src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src={currentUser.avatar || "noavatar.jpg"}
               alt=""
               className="mr-5 h-10 w-10 rounded-full object-cover"
             />
-            <span>John Doe</span>
+            <span>{currentUser.username}</span>
             <Link
               to="/profile"
               className="relative cursor-pointer border-0 bg-yellow-100 px-6 py-3"
@@ -56,7 +56,7 @@ const Navbar = () => {
             <a href="" className="nav-link">
               Sign in
             </a>
-            <a href="" className="nav-link hidden bg-yellow-300 px-3 py-1 m-5">
+            <a href="" className="nav-link m-5 hidden bg-yellow-300 px-3 py-1">
               Sign up
             </a>
           </>

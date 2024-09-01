@@ -1,7 +1,21 @@
+import { useNavigate } from "react-router-dom";
 import Chat from "../components/Chat";
 import UserList from "../components/UserList";
+import apiRequest from "../lib/apiRequests";
 
 const User = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    try {
+      const res = await apiRequest.post("/auth/logout");
+      localStorage.removeItem("user");
+      navigate("/");
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <div className="flex h-full">
       <div className="w-3/5 overflow-y-auto pb-12">
@@ -27,6 +41,12 @@ const User = () => {
             <span className="flex items-center gap-5">
               E-mail: <b>john@gmail.com</b>
             </span>
+            <button
+              onClick={handleLogout}
+              className="w-[100px] cursor-pointer rounded-md border-0 bg-teal-500 px-4 py-2 text-white"
+            >
+              Logout
+            </button>
           </div>
           <div className="flex items-center justify-between">
             <h1 className="font-thin">My List</h1>

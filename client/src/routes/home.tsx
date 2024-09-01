@@ -1,10 +1,11 @@
-import React from "react";
+import { useContext } from "react";
 import SearchBar from "../components/SearchBar";
+import { AuthContext } from "../context/AuthContext";
 
 const Home = () => {
+  const { currentUser } = useContext(AuthContext);
   return (
     <div className="flex h-full">
-      
       {/* LEFT SECTION*/}
       <div className="w-full lg:w-3/5">
         <div className="flex h-full flex-col justify-start gap-12 lg:justify-center lg:pr-24">
