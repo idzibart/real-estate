@@ -2,11 +2,12 @@ import React from "react";
 import Home from "./routes/home";
 import List from "./routes/list";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Layout from "./layout/layout";
+import { Layout, RequireAuth } from "./layout/layout";
 import Main from "./routes/main";
 import User from "./routes/user";
 import Login from "./routes/login";
 import Register from "./routes/register";
+import UpdateUser from "./routes/updateUser";
 
 function App() {
   const router = createBrowserRouter([
@@ -27,16 +28,26 @@ function App() {
           element: <Main />,
         },
         {
-          path: "/profile",
-          element: <User />,
-        },
-        {
           path: "/login",
           element: <Login />,
         },
         {
           path: "/register",
           element: <Register />,
+        },
+      ],
+    },
+    {
+      path: "/",
+      element: <RequireAuth />,
+      children: [
+        {
+          path: "/profile",
+          element: <User />,
+        },
+        {
+          path: "/profile/update",
+          element: <UpdateUser />,
         },
       ],
     },

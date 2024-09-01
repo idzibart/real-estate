@@ -53,10 +53,13 @@ const Navbar = () => {
           </div>
         ) : (
           <>
-            <a href="" className="nav-link">
+            <a href="/login" className="nav-link">
               Sign in
             </a>
-            <a href="" className="nav-link m-5 hidden bg-yellow-300 px-3 py-1">
+            <a
+              href="/register"
+              className="nav-link m-5 hidden bg-yellow-300 px-3 py-1"
+            >
               Sign up
             </a>
           </>
