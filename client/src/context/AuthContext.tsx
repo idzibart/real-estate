@@ -1,14 +1,5 @@
-import { createContext, ReactNode, useEffect, useState } from "react";
-import { User } from "../lib/types";
-
-interface AuthContextType {
-  currentUser: User | null;
-  updateUser: (data: User | null) => void;
-}
-
-interface AuthProviderProps {
-  children: ReactNode;
-}
+import { createContext, useEffect, useState } from "react";
+import { AuthContextType, AuthProviderProps, User } from "../lib/types";
 
 const defaultAuthContext: AuthContextType = {
   currentUser: null,
@@ -23,7 +14,7 @@ export const AuthContextProvider = ({ children }: AuthProviderProps) => {
     return userData ? JSON.parse(userData) : null;
   });
 
-// USER CHANGING & LOCALSTORAGE UPDATING
+  // USER CHANGING & LOCALSTORAGE UPDATING
   const updateUser = (data: User | null) => {
     setCurrentUser(data);
   };

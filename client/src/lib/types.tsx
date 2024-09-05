@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface SinglePost {
   id: number;
   title: string;
@@ -58,4 +60,28 @@ export interface User {
   email: string;
   avatar: string;
   isAdmin: boolean;
+}
+
+export interface AuthContextType {
+  currentUser: User | null;
+  updateUser: (data: User | null) => void;
+}
+
+export interface AuthProviderProps {
+  children: ReactNode;
+}
+
+export interface UploadWidgetProps {
+  uwConfig: {
+    cloudName: string;
+    uploadPreset: string;
+    multiple: boolean;
+    maxImageFileSize: number;
+    folder: string;
+  };
+  setPublicId: (publicId: string) => void;
+}
+
+export interface CloudinaryScriptContextType {
+  loaded: boolean;
 }

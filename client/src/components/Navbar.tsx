@@ -36,7 +36,7 @@ const Navbar = () => {
         {currentUser ? (
           <div className="m-5 flex items-center font-bold">
             <img
-              src={currentUser.avatar || "noavatar.jpg"}
+              src={currentUser.avatar || "/noavatar.jpg"}
               alt=""
               className="mr-5 h-10 w-10 rounded-full object-cover"
             />

@@ -1,13 +1,13 @@
 import { FormEvent, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import UploadWidget from "../../components/uploadWidget/UploadWidget";
 import { AuthContext } from "../context/AuthContext";
 import apiRequest from "../lib/apiRequests";
+import UploadWidget from "../components/UploadWidget";
 
 function UpdateUser() {
   const { currentUser, updateUser } = useContext(AuthContext);
   const [error, setError] = useState("");
-  const [avatar, setAvatar] = useState([]);
+  const [avatar, setAvatar] = useState<string[]>([]);
   const navigate = useNavigate();
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -68,7 +68,7 @@ function UpdateUser() {
           <button className="cursor-pointer rounded-md border-0 bg-teal-500 p-5 font-bold text-white">
             Update
           </button>
-          {error && <span>error</span>}
+          {error && <span>{error}</span>}
         </form>
       </div>
       <div className="flex w-2/5 flex-col items-center justify-center gap-5 bg-white">
@@ -77,16 +77,16 @@ function UpdateUser() {
           alt=""
           className="w-1/2 object-cover"
         />
-        {/* <UploadWidget
+        <UploadWidget
           uwConfig={{
-            cloudName: "lamadev",
-            uploadPreset: "estate",
+            cloudName: "idzimordo",
+            uploadPreset: "real-estate",
             multiple: false,
             maxImageFileSize: 2000000,
             folder: "avatars",
           }}
-          setState={setAvatar}
-        /> */}
+          setPublicId={(publicId) => setAvatar([publicId])} // Użycie funkcji inline
+        />
       </div>
     </div>
   );
