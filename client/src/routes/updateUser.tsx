@@ -85,7 +85,7 @@ function UpdateUser() {
             maxImageFileSize: 2000000,
             folder: "avatars",
           }}
-          setPublicId={(publicId) => setAvatar([publicId])} // Użycie funkcji inline
+          setPublicId={(publicId) => setAvatar([publicId])}
         />
       </div>
     </div>

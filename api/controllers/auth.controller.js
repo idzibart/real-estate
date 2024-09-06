@@ -40,7 +40,6 @@ export const login = async (req, res) => {
       return res.status(401).json({ message: "Invalid credentials" });
 
     //GENERATE COOKIE TOKEN AND SEND TO THE USER
-    // res.setHeader("Set-Cookie", "test=" + "myValue").json("Success");
     const age = 1000 * 60 * 60 * 24 * 7;
 
     const token = jwt.sign(

@@ -39,7 +39,7 @@ function UploadWidget({ uwConfig, setPublicId }: UploadWidgetProps) {
         (error: any, result: any) => {
           if (!error && result && result.event === "success") {
             console.log("Done! Here is the image info: ", result.info);
-            setPublicId(result.info.public_id);
+            setPublicId(result.info.secure_url);
           }
         },
       );
